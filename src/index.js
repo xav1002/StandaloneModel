@@ -1,5 +1,7 @@
 import * as BABYLON from "@babylonjs/core";
 import renderChromosome from "./chromosome";
+import renderArcs from "./arcs";
+import renderFlags from "./flags";
 
 // let rawStructure = 'https://raw.githubusercontent.com/debugpoint136/chromosome-3d/master/IMR90_chr07-0-159Mb.csv';
 
@@ -53,6 +55,10 @@ window.addEventListener('load', function() {
     testModel.position = new BABYLON.Vector3(30, 30, 30);
 
     renderChromosome(scene);
+
+    // renderFlags();
+
+    // renderArcs();
 
     engine.runRenderLoop(function() {
         if(scene) {
